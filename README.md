@@ -48,12 +48,11 @@ A secure TypeScript runtime on V8
 * Aims to be browser compatible.
 
 * Can be used as a library to easily build your own JavaScript runtime.
-	https://github.com/ry/deno/blob/master/cmd/main.go
-
+  https://github.com/ry/deno/blob/master/cmd/main.go
 
 ## Status
 
-Segfaulty.
+Segfault.
 
 No docs yet. For some of the public API see: [deno.d.ts](https://github.com/ry/deno/blob/master/deno.d.ts).
 
@@ -61,8 +60,7 @@ And examples are around here: [testdata/004_set_timeout.ts](https://github.com/r
 
 Roadmap is [here](https://github.com/ry/deno/blob/master/TODO.txt).
 
-Also see this preentation http://tinyclouds.org/jsconf2018.pdf
-
+Also see this presentation [jsconf2018.pdf](http://tinyclouds.org/jsconf2018.pdf).
 
 ## Compile instructions
 
@@ -97,6 +95,7 @@ go get -u github.com/jteeuwen/go-bindata/...
 
 You need to get and build [v8worker2](https://github.com/ry/v8worker2).  __The package will not build with `go
 get` and will log out an error ⚠__
+
 ```bash
 # pkg-config --cflags v8.pc
 Failed to open 'v8.pc': No such file or directory
@@ -111,6 +110,7 @@ go get -u github.com/ry/v8worker2
 cd $GOPATH/src/github.com/ry/v8worker2
 ./build.py --use_ccache
 ```
+
 Maybe also run `git submodule update --init` in the v8worker2 dir.
 
 Finally you can get `deno` and its other Go deps.
@@ -140,4 +140,3 @@ make fmt # Formats the code.
 
 make clean # Cleans the build.
 ```
-
